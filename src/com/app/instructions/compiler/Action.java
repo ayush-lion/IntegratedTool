@@ -64,14 +64,17 @@ public class Action {
 	public void setNumber(Integer number) {
 		this.number = number;
 	}
+	
 	/**
 	 * @return the finger
 	 */
 	public String getFinger() {
-		return finger;
+		return finger;	
 	}
+	
 	/**
 	 * @param finger the finger to set
+	 *
 	 */
 	public void setFinger(String finger) {
 		this.finger = finger;
@@ -86,6 +89,11 @@ public class Action {
 		buf.append("Number=> ").append(number).append(" :: ");
 		buf.append("Finger=> ").append(finger).append("\n");
 		return buf.toString();
+	}
+	
+	public void show() 
+	{
+		
 	}
 
 }

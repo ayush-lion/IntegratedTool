@@ -24,6 +24,7 @@ public class InstructionTag {
       * Self-closing tags like <br /> are considered to be "opening" tags,
       * and return true from the isOpenTag method.
       * Throws a NullPointerException if element is null. */
+    
     public InstructionTag(String element, boolean isOpenTag) {
         this.element = element.toLowerCase();
         this.isOpenTag = isOpenTag;
