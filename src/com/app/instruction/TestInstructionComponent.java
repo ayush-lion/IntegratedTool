@@ -98,10 +98,7 @@ public class TestInstructionComponent extends JFrame {
 			}
 		});
 		btnNewButton_1.setBounds(599, 18, 117, 29);
-		controllpanel.add(btnNewButton_1);
-		
-		
-		
+		controllpanel.add(btnNewButton_1);	
 	}
 
 	public void show_panel() throws IOException

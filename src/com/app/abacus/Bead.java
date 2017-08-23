@@ -46,9 +46,9 @@ public class Bead {
 	 */
 	public void drawBead(Graphics g) {
 		if (isSwitchable()) {
-			g.drawImage(heavenImage, posX, hPosY, width, height, null);
+			g.drawImage(this.heavenImage, this.posX, this.hPosY,this. width, this.height, null);
 		} else {
-			g.drawImage(earthImage, posX, ePosY, width, height, null);
+			g.drawImage(this.earthImage, this.posX, this.ePosY, this.width, this.height, null);
 		}
 	}
 
@@ -63,18 +63,25 @@ public class Bead {
 		}
 	}
 
+
+	
 	/**
 	 * Method is responsible to highlight bead
 	 */
 	public void highlight(Graphics g) {
 		g.setColor(Color.CYAN);
 		if(isSwitchable()) {
-			g.fillOval(posX, hPosY, width, height);
+			g.fillOval(this.posX, this.hPosY, this.width,this.height);
 		} else {
-			g.fillOval(posX, ePosY, width, height);
+			g.fillOval(this.posX, this.ePosY, this.width, this.height);
 		}
 	}
 
+	
+	
+	
+	
+	
 	/**
 	 * Method is responsible to draw finger
 	 */

@@ -18,7 +18,8 @@ public class TextAreaRenderer extends JTextArea implements TableCellRenderer {
 	private static final long serialVersionUID = 1L;
 	private final DefaultTableCellRenderer adaptee = new DefaultTableCellRenderer();
     /** map from table to map of rows to map of column heights */
-    private final Map cellSizes = new HashMap();
+    
+	private final Map cellSizes = new HashMap();
 
 
     public TextAreaRenderer() {
@@ -31,7 +32,8 @@ public class TextAreaRenderer extends JTextArea implements TableCellRenderer {
             boolean hasFocus, int row, int column) {
 
         // set the colours, etc. using the standard for that platform
-        adaptee.getTableCellRendererComponent(table, obj,
+       
+    	adaptee.getTableCellRendererComponent(table, obj,
                 isSelected, hasFocus, row, column);
         setForeground(adaptee.getForeground());
         setBackground(adaptee.getBackground());
@@ -41,6 +43,7 @@ public class TextAreaRenderer extends JTextArea implements TableCellRenderer {
 
 
         // This line was very important to get it working with JDK1.4
+        
         TableColumnModel columnModel = table.getColumnModel();
         setSize(columnModel.getColumn(column).getWidth(), 100000);
         int height_wanted = (int) getPreferredSize().getHeight();
@@ -70,6 +73,7 @@ public class TextAreaRenderer extends JTextArea implements TableCellRenderer {
      * also a TextAreaRenderer, we look at the maximum height in
      * its hash table for this row.
      */
+    
     private int findTotalMaximumRowSize(JTable table, int row) {
         int maximum_height = 0;
         Enumeration columns = table.getColumnModel().getColumns();

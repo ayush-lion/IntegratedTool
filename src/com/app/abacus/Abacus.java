@@ -200,7 +200,7 @@ public class Abacus extends AbstractAbacus {
 		// Draw Beam
 		beam.drawBeam(g);
 		
-		// Drww Rods
+		// Draw Rods
 		for (int i = 0; i < numOfRods; i++) {
 			for(int j = 0; j < 5; j++) {
 				beads[i][j].drawBead(g);

@@ -285,7 +285,7 @@ import com.app.utils.InstructionAttributeLoader;
 		instruction_Tutor.setSwitchable(true);
 		instruction_Tutor.setIns_text(text);
 	}
-	
+
 	public void TutorThinking(String text)
 	{
 
@@ -374,7 +374,4 @@ import com.app.utils.InstructionAttributeLoader;
 		Draw_Instruction_Tutor(g);
 		Draw_Instruction_Student(g);
 	}
-
-	
-
 }

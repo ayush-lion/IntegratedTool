@@ -89,9 +89,7 @@ public class InstructionPanel extends JPanel {
 			controller = new InstructionController(this);
 			
 		}
-		
 	}
-	
 	
 	public void Initialize_Parameter() throws IOException
 	{
@@ -106,8 +104,6 @@ public class InstructionPanel extends JPanel {
 	
 	public void Initialize_Init()
 	{
-	
-		
 		
 	}
 	
@@ -154,19 +150,5 @@ public class InstructionPanel extends JPanel {
 		//super.paint(g);
 		System.out.println("got it");
 		controller.DrawInstructionPanel(g);
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	}	
 }

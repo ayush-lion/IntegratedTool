@@ -34,7 +34,7 @@ public class Beam {
 	
 	public void highlight(Graphics g) {
 		g.setColor(Color.CYAN);
-		g.fillRect(posX, posY, width, height);
+		g.fillRect(this.posX, this.posY, this.width, this.height);
 	}
 	
 	/**

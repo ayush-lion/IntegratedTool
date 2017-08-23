@@ -62,6 +62,7 @@ public class AbacusPanel extends JPanel {
 	/**
 	 * Method is responsible to move Earth bead up
 	 */
+	
 	public void moveEarthBeadUp(int rodNum, int beadNum, String finger) throws AbacusException {
 		getAbacus().getLogger().logDebug("Inside moveEarthBeadUp....");
 		
@@ -110,6 +111,7 @@ public class AbacusPanel extends JPanel {
 	/**
 	 * Method is responsible to heaven bead up
 	 */
+	
 	public void moveHeavenBeadUp(int rodNum, String finger) throws AbacusException {
 		getAbacus().getLogger().logDebug("Inside moveHeavenBeadUp....");
 		
@@ -159,6 +161,7 @@ public class AbacusPanel extends JPanel {
 	/**
 	 * Method is responsible to hightlight Frame
 	 */
+	
 	public void highlightFrame() {
 		switchBoolean("doWeNeedToHighlightFrame");
 		this.repaint();
@@ -172,7 +175,7 @@ public class AbacusPanel extends JPanel {
 			getAbacus().getFrame().highlight(g);
 		}
 	}
-	
+
 	/**
 	 * Method is responsible to highlight rods
 	 */
@@ -189,10 +192,10 @@ public class AbacusPanel extends JPanel {
 			getAbacus().getRods()[i].highlight(g);
 		}
 	}
-	
 	/**
 	 * Method is responsible to highlight Specific rod
 	 */
+	
 	public void highlightSpecificRod(int rodNum) {
 		switchBoolean("doWeNeedToHighlightSpecificRods");
 		this.rodNumber = rodNum;
@@ -202,6 +205,7 @@ public class AbacusPanel extends JPanel {
 	/**
 	 * Method is responsible to hightlight Specific Rod
 	 */
+	
 	private void highlightSpecificRod(Graphics g) {
 		if(rodNumber < 1 || rodNumber > getAbacus().getNumOfRods()) {
 			return;
@@ -209,9 +213,13 @@ public class AbacusPanel extends JPanel {
 		getAbacus().getRods()[getAbacus().getNumOfRods() - rodNumber].highlight(g);
 	}
 	
+	
+	
+	
 	/**
 	 * Method is responsible to highlight Lower Beads
 	 */
+	
 	public void highlightLowerBeads() {
 		switchBoolean("doWeNeedToHighlightLowerBeads");
 		this.repaint();
@@ -220,6 +228,7 @@ public class AbacusPanel extends JPanel {
 	/**
 	 * Method is responsible to hightlight Lower Beads
 	 */
+	
 	private void highlightLowerBeads(Graphics g) {
 		for(int i = 0; i < getAbacus().getNumOfRods(); i++) {
 			for(int j = 0; j < 4; j++) {
@@ -228,12 +237,11 @@ public class AbacusPanel extends JPanel {
 		}
 	}
 	
-	
 	/**
 	 * Method is responsible to highlight Upper Beads
 	 */
 	public void highlightUpperBeads() {
-		switchBoolean("doWeNeedToHighlightUpperBeads");
+		switchBoolean("doWeNeedToHighlightUpperBeads"); 
 		this.repaint();
 	}
 	
@@ -247,9 +255,11 @@ public class AbacusPanel extends JPanel {
 	}
 	
 	
+	
 	/**
-	 * Method is responsible to highlight rods
+	 * Method is responsible to highlight beads
 	 */
+	
 	public void highlightBeads() {
 		switchBoolean("doWeNeedToHighlightBeads");
 		this.repaint();
@@ -289,7 +299,7 @@ public class AbacusPanel extends JPanel {
 	}
 	
 	/**
-	 * Method is responsible to highlight rods
+	 * Method is responsible to highlight Beam
 	 */
 	public void highlightDivider() {
 		switchBoolean("doWeNeedToHighlightDivider");
@@ -297,7 +307,7 @@ public class AbacusPanel extends JPanel {
 	}
 	
 	/**
-	 * Method is responsible to highlight rods
+	 * Method is responsible to highlight Beam
 	 */
 	private void highlightDivider(Graphics g) {
 		getAbacus().getBeam().highlight(g);
@@ -411,7 +421,7 @@ public class AbacusPanel extends JPanel {
 	/**
 	 * Reset Beads
 	 */
-	private void resetAbacus() {
+	public void resetAbacus() {
 		Bead[][] beads = getAbacus().getBeads();
 		for(int i=0;i<getAbacus().getNumOfRods();i++) {
 			for(int j=0;j<5;j++) {

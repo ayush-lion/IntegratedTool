@@ -116,9 +116,7 @@ public class TestCompilerFrame extends JFrame {
 					txtField.setText(selectedFile.getAbsolutePath());
 				}
 			}
-		});
-		
-        
+		});  
         this.setVisible(true);
 	}
 	
@@ -170,6 +168,7 @@ public class TestCompilerFrame extends JFrame {
 	/**
 	 * Method is responsible to print Map's data
 	 */
+	
 	private void displayInstructions(LinkedHashMap<String, HashMap<String, List<Action>>> instructionData) {
 		DefaultTableModel model = (DefaultTableModel) table.getModel();
 		model.getDataVector().removeAllElements();
@@ -178,7 +177,7 @@ public class TestCompilerFrame extends JFrame {
 		for (Entry<String, HashMap<String, List<Action>>> entry : entrySet) {
 			Object[] tableRow = new Object[3];
 			String key = entry.getKey();
-			tableRow[0] = key;
+			tableRow[0] = key; 
 			
 			HashMap<String, List<Action>> map = entry.getValue();
 			Set<Entry<String, List<Action>>> sEntry =  map.entrySet();

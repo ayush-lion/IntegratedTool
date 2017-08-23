@@ -25,6 +25,8 @@ import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
+import org.apache.tools.ant.types.FileList.FileName;
+
 import com.app.abacus.Finger;
 import com.app.abacus.panel.AbacusPanel;
 import com.app.abacus.panel.exception.AbacusException;
@@ -108,10 +110,12 @@ public class TestAbacusComponent extends JFrame {
 			setupPlayPanel();
 			
 			/* Add Components to Frame */
+			
 			this.getContentPane().add(abacusTopPanel);
 			this.getContentPane().add(panel);
 			this.getContentPane().add(instructionpanel);
-		//	playPanel.repaint();
+		
+			//	playPanel.repaint();
 			
 			this.setVisible(true);
 			
@@ -124,7 +128,7 @@ public class TestAbacusComponent extends JFrame {
 		try {
 			panel.initializeAbacus();
 			instructionpanel.Initialize_Instruction_Panel(instructionpanel);
-			compile("/Users/Panwar/Desktop/AppInstruction.xlsx");
+			compile("D:\\Official\\Tool\\AppInstruction.xlsx");
 		} catch (AbacusException e) { e.printStackTrace(); }
 	}
 	
@@ -401,8 +405,7 @@ public class TestAbacusComponent extends JFrame {
 				} catch (Exception e1) { e1.printStackTrace(); }
 			}
 		});
-		
-		
+			
 		// Add components in Panel
 		abacusTopPanel.add(doWeNeedFrame);
 		abacusTopPanel.add(doWeNeedFingers);
@@ -441,7 +444,7 @@ public class TestAbacusComponent extends JFrame {
 		performer.startReading();
 			//odel.addRow(tableRow);
 			}
-
+	
 	/**
 	 * @param args
 	 * @throws Throwable 
@@ -457,8 +460,6 @@ public class TestAbacusComponent extends JFrame {
 				e.printStackTrace();
 			}
 		   }
-		});
-		
+		});	
 	}
-
 }
